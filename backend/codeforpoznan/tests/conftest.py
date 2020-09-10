@@ -5,10 +5,10 @@ import tempfile
 from flask.testing import FlaskClient
 import pytest
 
-from backend.app import create_app
-from backend.extensions import db
-from backend.factories import HacknightFactory, ParticipantFactory
-from backend.models import User
+from codeforpoznan.app import create_app
+from codeforpoznan.extensions import db
+from codeforpoznan.factories import HacknightFactory, ParticipantFactory
+from codeforpoznan.models import User
 
 
 @pytest.fixture
@@ -100,7 +100,7 @@ def tokens(app, client, new_user, registered_user):
     with app.app_context():
         rv = client.post("/auth/login/", json=new_user)
         response = rv.get_json()
-        from backend.models import JWTToken
+        from codeforpoznan.models import JWTToken
 
         print(len(JWTToken.query.all()))
         yield {"access": response["access_token"], "refresh": response["refresh_token"]}
@@ -108,7 +108,7 @@ def tokens(app, client, new_user, registered_user):
 
 @pytest.fixture
 def auth_client(app, tokens):
-    from backend.models import JWTToken
+    from codeforpoznan.models import JWTToken
 
     print(len(JWTToken.query.all()))
 

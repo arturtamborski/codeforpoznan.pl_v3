@@ -1,7 +1,7 @@
 import click
 from flask.cli import with_appcontext
 
-from backend.models import JWTToken
+from codeforpoznan.models import JWTToken
 
 
 @click.command()

@@ -4,9 +4,9 @@ import click
 from flask.cli import with_appcontext
 from tqdm import tqdm
 
-from backend.extensions import db
-from backend.factories import HacknightFactory, ParticipantFactory, UserFactory
-from backend.models import Participant
+from codeforpoznan.extensions import db
+from codeforpoznan.factories import HacknightFactory, ParticipantFactory, UserFactory
+from codeforpoznan.models import Participant
 
 
 @click.command()

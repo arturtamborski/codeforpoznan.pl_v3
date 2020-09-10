@@ -1,29 +1,29 @@
 from flask import Flask
 from flask_cors import CORS
 
-from backend.commands.populate_database import populate_database
-from backend.commands.remove_expired_tokens import remove_expired_tokens
-from backend.extensions import api, db, mail, migrate, jwt
-from backend.models import JWTToken
-from backend.resources.auth import (
+from codeforpoznan.commands.populate_database import populate_database
+from codeforpoznan.commands.remove_expired_tokens import remove_expired_tokens
+from codeforpoznan.extensions import api, db, mail, migrate, jwt
+from codeforpoznan.models import JWTToken
+from codeforpoznan.resources.auth import (
     UserLogin,
     UserLogout,
     RefreshAccessToken,
     RefreshToken,
 )
-from backend.resources.contact import SendMessage
-from backend.resources.hacknight import (
+from codeforpoznan.resources.contact import SendMessage
+from codeforpoznan.resources.hacknight import (
     HacknightDetails,
     HacknightList,
     HacknightParticipants,
 )
-from backend.resources.participant import ParticipantDetails, ParticipantsList
+from codeforpoznan.resources.participant import ParticipantDetails, ParticipantsList
 
 
 def create_app():
     """Application factory function"""
     app = Flask(__name__)
-    app.config.from_object("backend.config.DevelopmentConfig")
+    app.config.from_object("codeforpoznan.config.DevelopmentConfig")
     app.cli.add_command(populate_database)
     app.cli.add_command(remove_expired_tokens)
 

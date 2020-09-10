@@ -2,8 +2,8 @@ from http import HTTPStatus
 
 import pytest
 
-from backend.models import Participant
-from backend.serializers.participant_serializer import ParticipantSchema
+from codeforpoznan.models import Participant
+from codeforpoznan.serializers.participant_serializer import ParticipantSchema
 
 
 @pytest.mark.parametrize("method", ["get", "delete"])

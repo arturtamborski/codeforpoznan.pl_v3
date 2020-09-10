@@ -1,6 +1,6 @@
 from http import HTTPStatus
 
-from backend.extensions import mail
+from codeforpoznan.extensions import mail
 
 
 def test_contact_us_endpoint(client, new_msg):

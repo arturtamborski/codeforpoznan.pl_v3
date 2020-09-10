@@ -1,6 +1,6 @@
 import datetime
 
-from backend.models import User, Participant, Hacknight
+from codeforpoznan.models import User, Participant, Hacknight
 
 
 def test_create_new_user(new_user):

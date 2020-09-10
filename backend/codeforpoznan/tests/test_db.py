@@ -2,8 +2,8 @@ from datetime import date, timedelta
 
 from flask_jwt_extended import create_access_token
 
-from backend.models import Hacknight, JWTToken, Participant, User
-from backend.resources.auth import add_token_to_database
+from codeforpoznan.models import Hacknight, JWTToken, Participant, User
+from codeforpoznan.resources.auth import add_token_to_database
 
 
 def test_add_new_user_to_db(_db, new_user):

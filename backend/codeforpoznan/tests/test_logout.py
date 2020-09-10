@@ -4,7 +4,7 @@ from flask import jsonify
 from flask_jwt_extended import jwt_required
 import pytest
 
-from backend.models import JWTToken
+from codeforpoznan.models import JWTToken
 
 
 @pytest.fixture

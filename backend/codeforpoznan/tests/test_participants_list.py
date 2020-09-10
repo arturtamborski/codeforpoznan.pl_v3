@@ -1,7 +1,7 @@
 from http import HTTPStatus
 
-from backend.models import Participant
-from backend.serializers.participant_serializer import ParticipantSchema
+from codeforpoznan.models import Participant
+from codeforpoznan.serializers.participant_serializer import ParticipantSchema
 
 
 def test_get_participants_when_logged_in(auth_client, add_participants):

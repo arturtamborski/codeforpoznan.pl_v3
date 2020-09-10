@@ -7,9 +7,9 @@ from flask_restful import Resource
 
 from marshmallow import fields, Schema, ValidationError
 
-from backend.extensions import db
-from backend.models import Hacknight, Participant
-from backend.serializers.hacknight_serializer import HacknightSchema
+from codeforpoznan.extensions import db
+from codeforpoznan.models import Hacknight, Participant
+from codeforpoznan.serializers.hacknight_serializer import HacknightSchema
 
 
 class HacknightList(Resource):

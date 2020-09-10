@@ -1,7 +1,7 @@
 from http import HTTPStatus
 import json
 
-from backend.models import Hacknight, Participant
+from codeforpoznan.models import Hacknight, Participant
 
 
 def test_get_hacknights_when_logged_in(auth_client, add_hacknights):

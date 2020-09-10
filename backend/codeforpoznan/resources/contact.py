@@ -6,8 +6,8 @@ from flask_restful import Resource
 
 from marshmallow import ValidationError
 
-from backend.serializers.message_serializer import MessageSchema
-from backend.extensions import mail
+from codeforpoznan.serializers.message_serializer import MessageSchema
+from codeforpoznan.extensions import mail
 
 
 class SendMessage(Resource):

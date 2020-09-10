@@ -7,9 +7,9 @@ from flask_restful import Resource
 
 from marshmallow import ValidationError
 
-from backend.extensions import db
-from backend.models import Participant
-from backend.serializers.participant_serializer import ParticipantSchema
+from codeforpoznan.extensions import db
+from codeforpoznan.models import Participant
+from codeforpoznan.serializers.participant_serializer import ParticipantSchema
 
 
 class ParticipantsList(Resource):

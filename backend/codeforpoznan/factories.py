@@ -1,8 +1,8 @@
 import factory
 from sqlalchemy import or_
 
-from backend.extensions import db
-from backend.models import Hacknight, Participant, User
+from codeforpoznan.extensions import db
+from codeforpoznan.models import Hacknight, Participant, User
 
 
 class BaseFactory(factory.alchemy.SQLAlchemyModelFactory):

@@ -9,7 +9,7 @@ from sqlalchemy.types import String
 from sqlalchemy.types import Integer
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from backend.extensions import db
+from codeforpoznan.extensions import db
 
 
 class User(db.Model):

@@ -5,10 +5,10 @@ from click.testing import CliRunner
 from flask.cli import ScriptInfo
 from flask_jwt_extended import create_access_token
 
-from backend.commands.remove_expired_tokens import remove_expired_tokens
-from backend.commands.populate_database import populate_database
-from backend.models import Hacknight, JWTToken, Participant, User
-from backend.resources.auth import add_token_to_database
+from codeforpoznan.commands.remove_expired_tokens import remove_expired_tokens
+from codeforpoznan.commands.populate_database import populate_database
+from codeforpoznan.models import Hacknight, JWTToken, Participant, User
+from codeforpoznan.resources.auth import add_token_to_database
 
 
 @pytest.fixture

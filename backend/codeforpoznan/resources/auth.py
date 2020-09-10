@@ -1,9 +1,9 @@
 from datetime import datetime, timedelta
 from http import HTTPStatus
 
-from backend.extensions import db
-from backend.models import User, JWTToken
-from backend.serializers.login_serializer import LoginSchema
+from codeforpoznan.extensions import db
+from codeforpoznan.models import User, JWTToken
+from codeforpoznan.serializers.login_serializer import LoginSchema
 from flask import request
 from flask_jwt_extended import (
     create_access_token,
