@@ -45,10 +45,10 @@ lint: black prettier
 lint-check: black-check prettier-check
 
 code-cov: ## Run pytest with code coverage
-	docker-compose exec backend pytest --cov=backend
+	docker-compose exec backend pytest --cov=codeforpoznan
 
-cov-report: ## Generate coverage raport in HTML
-	docker-compose exec backend pytest --cov=backend --cov-report=html
+cov-report: ## Generate coverage report in HTML
+	docker-compose exec backend pytest --cov=codeforpoznan --cov-report=html
 
 remove-tokens: ## Remove expired tokens from db
 	docker-compose exec backend flask remove-expired-tokens
